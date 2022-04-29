@@ -1,0 +1,187 @@
+.miniCart {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    z-index: 50;
+
+    .miniCartWrapper {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+    }
+
+    .miniCartOverlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(194, 186, 186, 0.407);
+        transition: opacity 0.4s;
+    }
+}
+
+
+.miniCartTray {
+    pointer-events: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    max-width: 100%;
+    padding-left: 2.5rem;
+
+    .wrapper {
+        pointer-events: auto;
+        width: 100vw;
+        max-width: 28rem;
+
+        .shadow {
+            display: flex;
+            background-color: white;
+            height: 100%;
+            flex-direction: column;
+            overflow-y: scroll;
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+    }
+
+    .lineItems {
+        flex: 1 1 0%;
+        overflow-y: auto;
+        padding: 1.5rem 1rem;
+
+        .header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+
+            .title {
+                font-size: 1.5rem;
+                font-weight: 500;
+                color: black;
+            }
+
+            .closeWrapper {
+                margin-left: 0.75rem;
+                display: flex;
+                align-items: center;
+                height: 1.75rem;
+            }
+
+            .close {
+                margin: 0.5rem;
+                padding: 0.5rem;
+                color:rgba(194, 186, 186);
+            }
+
+            .icon {
+                height: 1.5rem;
+                width: 1.5rem;
+            }
+        }
+
+        .lineItemsWrapper {
+            display: flow-root;
+
+            .lineItemWrapper {
+                display: flex;
+                padding: 2rem 0;
+            }
+
+            .lineItemImage {
+                position: relative;
+                flex-shrink: 0;
+                height: 6rem;
+                width: 6rem;
+                overflow: hidden;
+                border-radius: 6px;
+                border: 1px solid rgba(194, 186, 186);
+            }
+
+            .lineItemContent {
+                display: flex;
+                flex-direction: column;
+                flex: 1 1 0%;
+                margin-left: 1rem;
+
+                .lineItemTitle {
+                    display: flex;
+                    justify-content: space-between;
+                    font-weight: 500;
+                    color: black;
+                }
+
+                .lineItemPrice {
+                    margin-left: 1rem;
+                }
+
+                .lineItemVariant {
+                    font-size: 14px;
+                    margin-top: 0.5rem;
+                    color:rgba(194, 186, 186);
+                }
+
+                .lineItemQuantityWrapper {
+                    font-size: 14px;
+                    display: flex;
+                    flex: 1 1 0%;
+                    align-items: flex-end;
+                    justify-content: space-between;
+
+                    .qtyText {
+                        color:rgb(139, 133, 133)
+                    }
+                }
+
+                .lineItemRemove {
+                    color: rgb(51, 51, 244);
+                    font-weight: 500;
+
+                    &:hover {
+                        color: rgb(101, 101, 239);
+                    }
+                }
+            }
+        }
+    }
+
+    .checkoutWrapper {
+        border-top: 1px rgb(187, 185, 185) solid;
+        padding: 2rem 1rem;
+
+        .checkoutTotal {
+            display: flex;
+            justify-content: space-between;
+            font-size: 15px;
+            font-weight: 500;
+            color:rgb(29, 29, 29)
+        }
+
+        .checkoutShippingTaxText {
+            margin-top: 0.25rem;
+            font-size: 14px;
+            color:rgb(139, 133, 133);
+        }
+
+        .checkoutButton {
+            color: white;
+            font-size: 1rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 6px;
+            background-color: black;
+            padding: 0.75rem 1.5rem;
+            border: 1px solid transparent;
+        }
+    }
+}

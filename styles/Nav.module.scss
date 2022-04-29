@@ -1,0 +1,39 @@
+.header {
+    background-color:white;
+    border-bottom: 1px solid rgba(180, 175, 175, 0.283);
+    position: sticky;
+    top: 0;
+    z-index: 20;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 72rem;
+        padding: 1rem 0.5rem;
+        margin: auto;
+    }
+
+    .miniCartButton {
+        position: realtive;
+        margin-right: 1.5rem;
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+
+        .cartCounter {
+            position: absolute;
+            font-size: 0.75rem;
+            font-weight: normal;
+            color: white;
+            background-color: red;
+            padding: 0.75rem;
+            border-radius: 50px;
+
+            .counterText {
+                position: absolute;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+}
